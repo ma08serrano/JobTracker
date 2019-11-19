@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/job_form"
+    tools:context=".ViewUserJobActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:paddingTop="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="35dp"
+        android:orientation="vertical">
+
+        <!-- ProgressBar -->
+
+        <ProgressBar
+            android:id="@+id/job_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/job_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Job Url -->
+
+            <TextView
+                android:id="@+id/textViewJobURL"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible" />
+
+            <!-- Job Title -->
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Job Company -->
+
+            <TextView
+                android:id="@+id/textViewCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="15sp" />
+
+            <!-- Job Location -->
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="15sp" />
+
+            <!-- Separator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#e0e0e0" />
+
+            <!-- Job Description -->
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="15sp" />
+
+            <!-- Job Creation Date -->
+
+            <TextView
+                android:id="@+id/textViewCreationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="15sp" />
+
+            <!-- Job Company Url -->
+
+            <TextView
+                android:id="@+id/textViewCompanyUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Job Notes -->
+
+                <EditText
+                    android:id="@+id/notesView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="250dp"
+                    android:hint="@string/notes_text"
+                    android:textSize="15sp" />
+
+                <!-- Job Availability Category -->
+
+                <Spinner
+                    android:id="@+id/category_array_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    app:autoSizeTextType="uniform"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Update Button -->
+
+                <Button
+                    android:id="@+id/updateJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff5a1f"
+                    android:text="@string/update_job"
+                    android:textColor="#ffffff"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <!-- Delete Button -->
+
+                <Button
+                    android:id="@+id/deleteJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#db0202"
+                    android:text="@string/delete_job"
+                    android:textColor="#ffffff"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <Button
+                    android:id="@+id/cancelJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#dddddd"
+                    android:text="@string/cancel_user_job"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+            <!-- No matching data found -->
+
+            <LinearLayout
+                android:id="@+id/noDataLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_below="@id/fullTimeSpinner"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/noData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_matching_data_found"
+                    android:textSize="20dp"
+                    android:drawableTop="@drawable/ic_find_in_page" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

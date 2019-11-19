@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="35dp"
+    tools:context=".JobBoardFragment">
+
+    <!-- Job Category -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:autoSizeTextType="uniform" />
+    </RelativeLayout>
+
+    <!-- Job List -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/jobResultsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- ProgressBar -->
+
+        <ProgressBar
+            android:id="@+id/search_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <!-- No matching data found -->
+
+        <LinearLayout
+            android:id="@+id/noDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextView
+                android:id="@+id/noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_matching_data_found"
+                android:textSize="20dp"
+                android:drawableTop="@drawable/ic_find_in_page" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

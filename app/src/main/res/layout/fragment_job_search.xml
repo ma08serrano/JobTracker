@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    android:paddingBottom="35dp"
+    android:theme="@style/AppTheme"
+    tools:context=".JobSearchFragment">
+
+    <!-- Search -->
+
+    <EditText
+        android:id="@+id/searchValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="@string/search_text"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingTop="20dp"
+        app:autoSizeTextType="uniform" />
+
+    <!-- Location -->
+
+    <EditText
+        android:id="@+id/locationValue"
+        android:imeOptions="actionSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:drawableEnd="@drawable/ic_location"
+        android:layout_below="@+id/searchValue"
+        android:layout_alignStart="@+id/searchValue"
+        android:hint="@string/location_text"
+        android:inputType="text"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform" />
+
+    <!-- FullTime/PartTime Option -->
+
+    <Spinner
+        android:id="@+id/fullTimeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/searchValue"
+        android:layout_alignEnd="@+id/locationValue"
+        android:layout_alignParentEnd="true"
+        android:minWidth="0dp"
+        app:autoSizeTextType="uniform" />
+
+    <!-- Job List -->
+
+    <ListView
+        android:id="@+id/searchResultsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fullTimeSpinner"
+        android:padding="10dp"
+        android:visibility="invisible" />
+
+    <!-- ProgressBar -->
+
+    <ProgressBar
+        android:id="@+id/search_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/fullTimeSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- No matching data found -->
+
+    <LinearLayout
+        android:id="@+id/noDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_below="@id/fullTimeSpinner">
+
+        <TextView
+            android:id="@+id/noData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_matching_data_found"
+            android:textSize="20dp"
+            android:drawableTop="@drawable/ic_find_in_page" />
+    </LinearLayout>
+</RelativeLayout>

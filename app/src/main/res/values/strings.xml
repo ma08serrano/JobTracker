@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Joctracker</string>
+
+    <!-- TODO: Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_remember">Remember me</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_username">This username is invalid</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is invalid</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="register">Submit</string>
+    <string name="already_registered">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+    <string name="change_password">Change Password</string>
+    <string name="action_register">Create your account</string>
+    <string name="title">JobTracker</string>
+    <string name="title_activity_main">JobTracker</string>
+    <string name="title_user_initials">Account Info Header</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">JobTracker</string>
+    <string name="nav_header_subtitle">Job Application Tracker</string>
+    <string name="nav_header_desc">Navigation Header</string>
+    <string name="action_settings">Settings</string>
+    <string name="update_password">Change</string>
+    <string name="enter_old_password">Enter Old Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="incorrect_orig_password">Wrong old password entered </string>
+    <string name="incorrect_new_password">Wrong new password entered </string>
+    <string name="incorrect_confirm_password">Wrong confirm password entered </string>
+    <string name="no_matching_data_found">No matching data found </string>
+
+    <!-- TODO: Page Titles -->
+    <string name="title_registration">Registration</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_job_search">Job Search</string>
+    <string name="title_job_board">Job Board</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_username">Username</string>
+    <string name="full_time">Full Time</string>
+    <string name="location_text">Location</string>
+    <string name="search_text">Search</string>
+    <string name="add_job">Add job</string>
+    <string name="load_job">Load job</string>
+    <string name="delete_job">Delete Job</string>
+    <string name="update_job">Update Job</string>
+    <string name="cancel_user_job">Cancel</string>
+    <string name="add_user_job">Add User Job</string>
+    <string name="load_user_job">Load User Job</string>
+    <string name="delete_user_job">Delete User Job</string>
+    <string name="update_user_job">Update User Job</string>
+    <string name="notes_text">Place your notes here</string>
+
+    <string-array name="fulltime_array">
+        <item>Full Time</item>
+        <item>Part Time</item>
+    </string-array>
+    <string-array name="category_array">
+        <item> All Jobs </item>
+        <item>Wishlist</item>
+        <item>Applied</item>
+        <item>Phone</item>
+        <item>Offer</item>
+        <item>Rejected</item>
+    </string-array>
+    <string-array name="category_array_job">
+        <item></item>
+        <item>Wishlist</item>
+        <item>Applied</item>
+        <item>Phone</item>
+        <item>Offer</item>
+        <item>Rejected</item>
+    </string-array>
+
+</resources>

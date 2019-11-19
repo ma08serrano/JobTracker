@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity">
+
+    <!-- ProgressBar -->
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Icon -->
+
+        <ImageView
+            android:id="@+id/icon_jobtracker"
+            android:src="@drawable/jobtracker"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.672" />
+
+        <!-- Username -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/lbl_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:inputType="textAutoComplete"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/icon_jobtracker"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/password"
+                android:autofillHints="@string/password"
+                android:imeActionId="6"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/saveLoginCheckBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Remember me -->
+
+        <CheckBox
+            android:id="@+id/saveLoginCheckBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/prompt_remember"
+            app:layout_constraintBottom_toTopOf="@+id/login_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/login_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="#279bce"
+            android:text="@string/action_sign_in_short"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lbl_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Don't have an account -->
+
+        <TextView
+            android:id="@+id/lbl_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/register_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Register Button -->
+
+        <Button
+            android:id="@+id/register_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/action_register"
+            android:textSize="14sp"
+            android:textColor="#ed5b5b"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</LinearLayout>
